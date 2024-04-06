@@ -1,0 +1,377 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+.like-mode {
+    color: red;
+}
+.container {
+    /* display: flex; */
+    /* flex-basis: 20% 55% 25%; */
+}
+
+/***************** left sideBar **************/
+.sideBar {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 18%;
+    height: 100%;
+    padding: 32px 22px;
+    border-right: 1px solid silver;
+}
+    /* logo */
+.logo {
+    margin-bottom: 36px;
+}
+.logo img {
+    width: 110px;
+    height: auto;
+}
+    /* navigation */
+ul li {
+    display: flex;
+    align-items: center;
+    /* padding: 12px; */
+}
+ul li:not(:last-child) {
+    margin-bottom: 34px;
+}
+li i {
+    font-size: 22px;
+}
+li a {
+    display: block; 
+    font-size: 15px;
+    color: #000;
+    margin-left: 16px;
+}
+.homeSec {
+    margin-bottom: 70px;
+}
+        /* hover Effect */
+.active {
+    font-weight: bolder;
+}
+li:hover {
+    background-color: rgb(228, 224, 224);
+    border-radius: 40px;
+}  
+li:hover i{
+    font-size: 23px;
+}
+
+
+
+
+/*******************    ******** midColumn ******   ************/
+
+/* storySection */
+.midColumn {
+
+    cursor: pointer;
+    width: 45%;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    /* margin-right: 32px; */
+}
+.storyContainer {
+    padding: 50px 52px 0 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.storylogo {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 0;
+    border-radius: 50%;
+    background: radial-gradient(rgb(0,0,0,0.15) 60%, transparent 0), 
+    radial-gradient(white 65%, transparent 0),
+    linear-gradient(to top right, orange, deeppink);
+    margin-bottom: 6px;
+    /* overflow: hidden; */
+}
+.storylogo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: circle(42%);
+}
+.story p {
+    font-size: 12px;
+    color: #5c5757;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; 
+    width: 62px;
+}
+
+/* mainSection */
+.mainContainer {
+    padding: 0 0 0 80px;
+}
+.postContainer {
+    padding-bottom: 18px;
+    border-bottom: 1px solid silver;
+    margin-bottom: 18px;
+}
+.accInfo,
+.abtAcc,
+.viewersRxnContainer,
+.viewersRxn,
+.commentContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+        /* row1     accInfo */
+.accInfo {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.accLogo img {
+    width: 40px;
+    height: 40px;
+}
+.accDetails {
+    margin-left: 6px;
+}
+.accDetails h5 {
+    color: #5c5757;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+.accDetails h5 span {
+    color: #b3b3b3;
+}
+.accDetails p {
+    font-size: 12px;
+}
+.extra i {
+    font-size: 18px;
+    display: block;
+    color: #5c5757;
+}
+        /* row2      post */
+.post {
+    cursor: default;
+    margin-bottom: 6px;
+}
+.post img {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+
+        /* row3 save  */
+.viewersRxnContainer {
+    margin-bottom: 6px;
+}
+.viewersRxn .tooltipContainer i {
+    margin-right: 18px;
+}
+        /* hover effect for tooltip txt */
+.tooltipContainer i {
+    font-size: 24px;
+    position: relative;
+    display: inline-block;
+}
+.tooltipContainer span {
+    visibility: hidden;
+    width: 120px;
+    background-color: #b3b3b3;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+.tooltipContainer:hover .tooltipContainer span {
+    visibility: visible;
+}
+        /* row4 abtPost */
+.abtPost {
+    margin-bottom: 8px;
+}
+.likes {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #5c5757;
+}
+.postTxt {
+    font-size: 14px;
+}
+.postTxt a {
+    font-weight: 600;
+    color: #5c5757;
+}
+.viewComment p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #b3b3b3;
+    margin-bottom: 6px;
+}
+.commentContainer a {
+    display: block;
+    color: #b3b3b3;
+    font-size: 14px;
+}
+/* footer */
+.bottomContainer {
+    color: #b3b3b3;
+    font-size: 14px;
+    padding: 60px 0 36px 45px;
+}
+.bottomContainer a {
+    color: #b3b3b3;
+    font-size: 13px;
+}
+.bottomContainer .about {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.meta,
+.copyRights {
+    margin-bottom: 24px;
+    text-align: center;
+}
+.bottomContainer .undrl:hover  {
+    text-decoration: underline;
+}
+.copyRights i {
+    margin-right: 8px;
+}
+
+
+/* ***********  right side Bar \ right Cloumn ************ */
+
+.rightColumn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28%;
+    margin-top: 54px;
+    padding-right: 18px;
+    padding-left: 6px;
+}
+        /* UserAcount */
+.myAccount,
+.userAccountWrapper,
+.suggestions,
+.sugAccount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.myAccount {
+    padding: 0 58px 0 12px;
+    margin-bottom: 16px;
+}
+.profile img {
+    width: 55px;
+    height: 55px;
+    display: block;
+    background-size: cover;
+}
+.abtUser {
+    padding-left: 8px;
+}
+.abtUser h5 {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.abtUser p {
+    font-size: 13px;
+}
+.myAccount a,
+.sugAccount a {
+    display: block;
+    font-size: 12px;
+    color: rgb(0, 47, 255);
+}
+
+        /* suggestion Container*/
+.suggestionContainer {
+    padding-right: 45px;
+    margin-bottom: 32px;
+}
+.sugAccount {
+    cursor: pointer;
+}
+.sugAccount:not(:last-child) {
+    margin-bottom: 10px;
+}
+.suggestions h6 {
+    display: block;
+    color: #b3b3b3;
+    font-size: 14px;
+    /* font-weight: 600; */
+}
+.suggestions a {
+    display: block;
+    color: #000;
+    font-size: 12px;
+}
+.suggestions a:hover {
+    color: blue;
+}
+.suggestions {
+    margin-bottom: 18px;
+}
+.sugAccount a:hover {
+    color: #000;
+}
+.abtSug p {
+    width: 200px; 
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; 
+}
+
+        /* about */
+.rightColumn .about {
+    margin: 0 32px;
+    color: #b3b3b3;
+}
+.aboutUs {
+    margin-bottom: 18px;
+}
+.aboutUs a {
+    color: #b3b3b3;
+    font-size: 13px;
+
+}
+.rightColumn .about p {
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.aboutUs a:hover {
+    text-decoration: underline;
+}
+/* .aboutUs a::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 2px;
+    color: #b3b3b3;
+    background-color: #b3b3b3;
+} */
